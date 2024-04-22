@@ -1,4 +1,4 @@
-# mclachnewsbot
+# Carolina News Bot
 
 This is a [Dagster](https://dagster.io/) project scaffolded with [`dagster project scaffold`](https://docs.dagster.io/getting-started/create-new-project).
 
@@ -39,7 +39,7 @@ Check out the [Dagster Cloud Documentation](https://docs.dagster.cloud) to learn
 
 
 ## Basic Operation
-McLachNewsBot operates using the following basic loop
+Carolina News Bot operates using the following basic loop
 1. Fetch the latest news from Google News using GoogleNews API
 2. Filter the news to only include these from specified sources
 3. Check if we already have the metadata for this news article stored or if we had already posted it.  If not, add it to the metadata file
@@ -51,26 +51,20 @@ McLachNewsBot operates using the following basic loop
 The bot is configured using a configuration file, `config.yaml`.  This file needs to have the following structure:
 ```
 settings:
-  chelsea:
-    name: Chelsea FC
+  carolina:
+    name: Carolina Panthers
     language: en
     staleness: 3h
-    news_search_string: chelsea fc
+    news_search_string: Carolina Panthers
     nlp_filter_score: 0.975
     acceptable_news_sources:
-      - Goal.com
-      - Metro.co.uk
-      - Evening Standard
-      - The Independent
-      - The Guardian
-      - BBC Sport
-      - Chelsea FC
-      - We Ain't Got No History
-      - Football.London
-      - The Athletic
+      - ESPN.com
+      - Carolina Panthers
+      - Bleacher Report
+      
     verified_news_sources:
-      - Chelsea FC
-      - We Ain't Got No History
+      - Carolina Panthers
+      - Bleacher Report
     twitter_api:
       client_id: **client_id**
       client_secret: **client_secret**
@@ -94,7 +88,7 @@ In order to post tweets, you need to have a Twitter Developer account and create
 - Access token
 - Access token secret
 
-An incredibly crappy documentation of it can be found [here](https://developer.twitter.com/en/docs/twitter-api).  Elon Musk is a moron and thus the twitter free tier is limited to 50 tweets per day, a limit you'll almost certainly run against.  Good luck!
+An incredibly bad documentation of it can be found [here](https://developer.twitter.com/en/docs/twitter-api). The twitter free tier is limited to 50 tweets per day, a limit you'll almost certainly run against.  Good luck!
 
 ## Configuring the OpenAI API
 You'll need to create a openapi account and generate an API key.  Pretty good documentation is available [here](https://platform.openai.com/docs/overview).  API access to the model used is priced at less than $0.001 for a typical request this bot makes at the time of writing, so while running this will cost you money, the amount is pretty negligible.
