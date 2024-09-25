@@ -1,24 +1,18 @@
 settings:
-  chelsea:
-    name: Chelsea FC
+  carolina:
+    name: Carolina Panthers
     language: en
     staleness: 3h
-    news_search_string: chelsea fc
+    news_search_string: Carolina Panthers
     nlp_filter_score: 0.975
     acceptable_news_sources:
-      - Goal.com
-      - Metro.co.uk
-      - Evening Standard
-      - The Independent
-      - The Guardian
-      - BBC Sport
-      - Chelsea FC
-      - We Ain't Got No History
-      - Football.London
-      - The Athletic
+      - ESPN.com
+      - Carolina Panthers
+      - Bleacher Report
+      
     verified_news_sources:
-      - Chelsea FC
-      - We Ain't Got No History
+      - Carolina Panthers
+      - Bleacher Report
     twitter_api:
       client_id: **client_id**
       client_secret: **client_secret**

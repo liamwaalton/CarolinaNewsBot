@@ -1,8 +1,8 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="mclachnewsbot",
-    packages=find_packages(exclude=["mclachnewsbot_tests"]),
+    name="CarolinaNewsBot",
+    packages=find_packages(exclude=["CarolinaNewsBot_tests"]),
     install_requires=[
         "dagster==1.6.13",
         "dagster-webserver==1.6.13",

@@ -1,5 +1,5 @@
 import tweepy
-from mclachnewsbot.config import parse_config
+from CarolinaNewsBot.config import parse_config
 
 from io import BytesIO
 from typing import List, Tuple

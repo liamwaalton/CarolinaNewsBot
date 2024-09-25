@@ -1,5 +1,5 @@
 from dagster import asset, Config, AssetExecutionContext
-from mclachnewsbot.config import parse_config
+from CarolinaNewsBot.config import parse_config
 from typing import List, Dict, Any
 import GoogleNews
 import requests
@@ -9,11 +9,11 @@ import datetime as dt
 import json
 import hashlib
 from openai import OpenAI
-from mclachnewsbot.tweeting import send_tweet
+from CarolinaNewsBot.tweeting import send_tweet
 
 from unidecode import unidecode
 import codecs
-from mclachnewsbot.nlp import initialize_model, vectorize_text, similarity
+from CarolinaNewsBot.nlp import initialize_model, vectorize_text, similarity
 
 
 class AssetConfig(Config):
